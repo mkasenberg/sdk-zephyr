@@ -1613,6 +1613,7 @@ if(CONFIG_BUILD_OUTPUT_HEX OR BOARD_FLASH_RUNNER STREQUAL openocd)
               $<TARGET_PROPERTY:bintools,elfconvert_flag_infile>${KERNEL_ELF_NAME}
               $<TARGET_PROPERTY:bintools,elfconvert_flag_outfile>${KERNEL_HEX_NAME}
               $<TARGET_PROPERTY:bintools,elfconvert_flag_final>
+      COMMAND bash /home/magda/ncs/v2.7.0/nrf/samples/bluetooth/central_and_peripheral_hr/copy_mynewt_script.sh
       )
     list(APPEND
       post_build_byproducts
